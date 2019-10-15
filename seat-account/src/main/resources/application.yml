@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: seat-account
+  datasource:
+    hikari:
+      jdbc-url: jdbc:mysql://192.168.171.101:3306/seat-account?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: root
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: fsp_tx_group
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+server:
+  port: 8081
+
+eureka:
+  server: # 官方不存在的配置（自定义配置）
+    host: 127.0.0.1
+    port: 8761
+  client:
+    enabled: true
+    serviceUrl:
+      defaultZone: http://${eureka.server.host}:${eureka.server.port}/eureka
+    registryFetchIntervalSeconds: 5 # 5 秒轮训一次
+  instance:
+    instanceId: ${spring.application.name}:${server.port}
