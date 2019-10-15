@@ -11,7 +11,7 @@ import java.math.BigDecimal;
  * @author IT云清
  */
 @Data
-@TableName("`order`")
+@TableName("order1")
 public class Order {
 
     private Long id;

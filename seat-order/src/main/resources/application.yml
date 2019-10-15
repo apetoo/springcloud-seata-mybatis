@@ -2,11 +2,10 @@ spring:
   application:
     name: seat-order
   datasource:
-    hikari:
-      jdbc-url: jdbc:mysql://192.168.171.101:3306/seat-order?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      username: root
-      password: root
+    url: jdbc:mysql://192.168.171.101:3306/seat-order?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
   cloud:
     alibaba:
       seata:

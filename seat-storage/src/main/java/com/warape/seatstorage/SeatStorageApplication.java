@@ -12,7 +12,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @author: 万明宇 (warApe)
  * @create: 2019-10-14 14:13
  **/
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+@SpringBootApplication
 @EnableDiscoveryClient
 @MapperScan("com.warape.seatstorage.mapper")
 public class SeatStorageApplication {
