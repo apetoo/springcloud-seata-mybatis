@@ -20,8 +20,8 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 -- Table structure for order
 -- ----------------------------
-DROP TABLE IF EXISTS `order`;
-CREATE TABLE `order`  (
+DROP TABLE IF EXISTS `order1`;
+CREATE TABLE `order1`  (
   `id` bigint(11) NOT NULL AUTO_INCREMENT,
   `user_id` bigint(11) NULL DEFAULT NULL COMMENT '用户id',
   `product_id` bigint(11) NULL DEFAULT NULL COMMENT '产品id',
